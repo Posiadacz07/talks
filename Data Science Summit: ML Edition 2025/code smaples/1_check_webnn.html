@@ -1,0 +1,22 @@
+<html>
+
+<body>
+  <h1>WebNN</h1>
+  <h3>Check WebNN Support</h3>
+
+  <script type="module">
+
+(async () => {
+  var msg = "";
+  if (!navigator.ml) {
+    msg = "<p>WebNN not enabled in browser</p>";
+    msg += "<p>Open URL chrome://flags/, search for webnn, and set to enable</p>";
+  } else {
+    msg = "<p>WebNN enabled</p>";
+  }
+  document.getElementsByTagName('body')[0].innerHTML += msg;
+})();
+
+</script>
+</body>
+</html>
